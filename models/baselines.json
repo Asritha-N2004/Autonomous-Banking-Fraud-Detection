@@ -1,0 +1,265 @@
+{
+  "version": "baseline-10b78d7a1569",
+  "seed": 42,
+  "data_sha256": "c6531c4a7f878dee89fb72b42933dda7b4a73880b368bb189d5e285052964bf0",
+  "created_at": "2026-11-08T07:51:43.944941+00:00",
+  "synthetic": true,
+  "runtime": {
+    "scikit-learn": "1.6.1",
+    "numpy": "2.2.5",
+    "pandas": "2.2.3",
+    "networkx": "3.4.2",
+    "joblib": "1.4.2"
+  },
+  "configuration": {
+    "seed": 42,
+    "train_fraction": 0.6,
+    "validation_fraction": 0.2,
+    "calibration": "sigmoid",
+    "features": [
+      "log_amount",
+      "hour",
+      "day_of_week",
+      "prior_count",
+      "prior_mean",
+      "amount_ratio",
+      "velocity_24h",
+      "unique_counterparties",
+      "new_beneficiary",
+      "new_device",
+      "account_degree",
+      "transaction_type",
+      "channel"
+    ],
+    "estimators": [
+      "logistic_regression",
+      "random_forest",
+      "gradient_boosting",
+      "xgboost"
+    ]
+  },
+  "splits": {
+    "train": 1440,
+    "validation": 480,
+    "test": 480
+  },
+  "split_end_times": {
+    "train": "2025-01-20 23:45:00+00:00",
+    "validation": "2025-01-27 15:45:00+00:00",
+    "test": "2025-02-03 07:53:00+00:00"
+  },
+  "train_positive_rate": 0.06180555555555556,
+  "metrics": {
+    "logistic_regression": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888,
+      "roc_auc": 0.9896739130434783,
+      "pr_auc": 0.9266896880209574,
+      "precision_at_k": 0.75,
+      "recall_at_k": 0.9,
+      "k": 24,
+      "confusion_matrix": [
+        [
+          460,
+          0
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.2,
+      "samples": 480,
+      "positive_labels": 20
+    },
+    "random_forest": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888,
+      "roc_auc": 0.9982608695652173,
+      "pr_auc": 0.9672592592592593,
+      "precision_at_k": 0.75,
+      "recall_at_k": 0.9,
+      "k": 24,
+      "confusion_matrix": [
+        [
+          460,
+          0
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.2,
+      "samples": 480,
+      "positive_labels": 20
+    },
+    "gradient_boosting": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888,
+      "roc_auc": 0.9957608695652175,
+      "pr_auc": 0.9404761904761905,
+      "precision_at_k": 0.7083333333333334,
+      "recall_at_k": 0.85,
+      "k": 24,
+      "confusion_matrix": [
+        [
+          460,
+          0
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.2,
+      "samples": 480,
+      "positive_labels": 20
+    },
+    "xgboost": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8888888888888888,
+      "roc_auc": 0.9819565217391304,
+      "pr_auc": 0.8695121578690128,
+      "precision_at_k": 0.6666666666666666,
+      "recall_at_k": 0.8,
+      "k": 24,
+      "confusion_matrix": [
+        [
+          460,
+          0
+        ],
+        [
+          4,
+          16
+        ]
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.2,
+      "samples": 480,
+      "positive_labels": 20
+    },
+    "isolation_forest": {
+      "pr_auc": 0.6935298818146849,
+      "roc_auc": 0.9783695652173913,
+      "score_type": "uncalibrated_anomaly_ranking",
+      "samples": 480
+    },
+    "local_outlier_factor": {
+      "pr_auc": 0.07780973058459248,
+      "roc_auc": 0.5423913043478261,
+      "score_type": "uncalibrated_anomaly_ranking",
+      "samples": 480
+    }
+  },
+  "limitations": [
+    "Synthetic benchmark only; no banking validity established.",
+    "Calibration measured on synthetic temporal validation; real-world recalibration required.",
+    "Channel subgroup metrics are operational, not protected-attribute fairness certification."
+  ],
+  "channel_subgroups": {
+    "atm": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "precision_at_k": 0.25,
+      "recall_at_k": 1.0,
+      "k": 4,
+      "confusion_matrix": [
+        [
+          89,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "samples": 90,
+      "positive_labels": 1
+    },
+    "branch": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "precision_at_k": 0.6666666666666666,
+      "recall_at_k": 1.0,
+      "k": 3,
+      "confusion_matrix": [
+        [
+          60,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.0,
+      "samples": 62,
+      "positive_labels": 2
+    },
+    "mobile": {
+      "precision": 1.0,
+      "recall": 0.7,
+      "f1": 0.8235294117647058,
+      "roc_auc": 0.9974358974358974,
+      "pr_auc": 0.9558119658119658,
+      "precision_at_k": 0.9,
+      "recall_at_k": 0.9,
+      "k": 10,
+      "confusion_matrix": [
+        [
+          195,
+          0
+        ],
+        [
+          3,
+          7
+        ]
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.3,
+      "samples": 205,
+      "positive_labels": 10
+    },
+    "web": {
+      "precision": 1.0,
+      "recall": 0.8571428571428571,
+      "f1": 0.9230769230769231,
+      "roc_auc": 0.9963054187192119,
+      "pr_auc": 0.9571428571428572,
+      "precision_at_k": 1.0,
+      "recall_at_k": 0.8571428571428571,
+      "k": 6,
+      "confusion_matrix": [
+        [
+          116,
+          0
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "false_positive_rate": 0.0,
+      "false_negative_rate": 0.14285714285714285,
+      "samples": 123,
+      "positive_labels": 7
+    }
+  }
+}

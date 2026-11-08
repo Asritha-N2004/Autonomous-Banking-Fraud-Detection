@@ -1,0 +1,269 @@
+{
+  "seed": 42,
+  "results": {
+    "single_model": {
+      "ranking_metrics": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.75,
+        "k": 3,
+        "confusion_matrix": [
+          [
+            56,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.0,
+        "samples": 60,
+        "positive_labels": 4
+      },
+      "score_type": "calibrated_supervised_probability",
+      "mean_duration_ms": 112.75709999948351,
+      "mean_evidence_items": 0.0,
+      "incomplete_workflows": 0,
+      "sampled_test_records": 60,
+      "alert_volume_at_research_threshold": 4
+    },
+    "ml_plus_graph": {
+      "ranking_metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.75,
+        "k": 3,
+        "confusion_matrix": [
+          [
+            56,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "samples": 60,
+        "positive_labels": 4
+      },
+      "score_type": "uncalibrated_investigation_priority",
+      "mean_duration_ms": 348.1363833348344,
+      "mean_evidence_items": 2.0,
+      "incomplete_workflows": 0,
+      "sampled_test_records": 60,
+      "alert_volume_at_research_threshold": 4
+    },
+    "full": {
+      "ranking_metrics": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.75,
+        "k": 3,
+        "confusion_matrix": [
+          [
+            56,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.5,
+        "samples": 60,
+        "positive_labels": 4
+      },
+      "score_type": "uncalibrated_investigation_priority",
+      "mean_duration_ms": 303.1516716699116,
+      "mean_evidence_items": 6.0,
+      "incomplete_workflows": 0,
+      "sampled_test_records": 60,
+      "alert_volume_at_research_threshold": 4
+    },
+    "without_behavioral": {
+      "ranking_metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.75,
+        "k": 3,
+        "confusion_matrix": [
+          [
+            56,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "samples": 60,
+        "positive_labels": 4
+      },
+      "score_type": "uncalibrated_investigation_priority",
+      "mean_duration_ms": 310.06879666771664,
+      "mean_evidence_items": 5.0,
+      "incomplete_workflows": 0,
+      "sampled_test_records": 60,
+      "alert_volume_at_research_threshold": 4
+    },
+    "without_graph": {
+      "ranking_metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.75,
+        "k": 3,
+        "confusion_matrix": [
+          [
+            56,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "samples": 60,
+        "positive_labels": 4
+      },
+      "score_type": "uncalibrated_investigation_priority",
+      "mean_duration_ms": 121.8324666658494,
+      "mean_evidence_items": 5.0,
+      "incomplete_workflows": 0,
+      "sampled_test_records": 60,
+      "alert_volume_at_research_threshold": 4
+    },
+    "without_ml": {
+      "ranking_metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.9821428571428572,
+        "pr_auc": 0.875,
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.75,
+        "k": 3,
+        "confusion_matrix": [
+          [
+            56,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "samples": 60,
+        "positive_labels": 4
+      },
+      "score_type": "uncalibrated_investigation_priority",
+      "mean_duration_ms": 166.7517983315823,
+      "mean_evidence_items": 5.0,
+      "incomplete_workflows": 0,
+      "sampled_test_records": 60,
+      "alert_volume_at_research_threshold": 0
+    },
+    "without_evidence": {
+      "ranking_metrics": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666,
+        "roc_auc": 1.0,
+        "pr_auc": 1.0,
+        "precision_at_k": 1.0,
+        "recall_at_k": 0.75,
+        "k": 3,
+        "confusion_matrix": [
+          [
+            56,
+            0
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.5,
+        "samples": 60,
+        "positive_labels": 4
+      },
+      "score_type": "uncalibrated_investigation_priority",
+      "mean_duration_ms": 364.065696663359,
+      "mean_evidence_items": 0.0,
+      "incomplete_workflows": 60,
+      "sampled_test_records": 60,
+      "alert_volume_at_research_threshold": 4
+    },
+    "without_supervisor_aggregation": {
+      "ranking_metrics": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "roc_auc": 0.5,
+        "pr_auc": 0.06666666666666667,
+        "precision_at_k": 0.3333333333333333,
+        "recall_at_k": 0.25,
+        "k": 3,
+        "confusion_matrix": [
+          [
+            56,
+            0
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 1.0,
+        "samples": 60,
+        "positive_labels": 4
+      },
+      "score_type": "uncalibrated_investigation_priority",
+      "mean_duration_ms": 249.68168499908643,
+      "mean_evidence_items": 6.0,
+      "incomplete_workflows": 60,
+      "sampled_test_records": 60,
+      "alert_volume_at_research_threshold": 0
+    }
+  },
+  "limitations": [
+    "Synthetic, sampled offline evaluation only.",
+    "Ablations intentionally omit agents and can yield incomplete workflows.",
+    "Evidence count is a completeness proxy, not evidence correctness.",
+    "Human effort has not been measured; requires a prospective investigator study.",
+    "Priority threshold and 0.5 classification threshold are arbitrary research settings.",
+    "Ablation scores retain original weights without renormalization."
+  ]
+}

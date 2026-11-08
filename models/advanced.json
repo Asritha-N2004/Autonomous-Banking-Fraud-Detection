@@ -1,0 +1,46 @@
+{
+  "seed": 42,
+  "epochs": 35,
+  "synthetic": true,
+  "models": {
+    "autoencoder": {
+      "pr_auc": 0.3476891531870958,
+      "roc_auc": 0.9238043478260869,
+      "score_type": "reconstruction_error; not probability"
+    },
+    "graphsage": {
+      "precision": 0.9523809523809523,
+      "recall": 1.0,
+      "f1": 0.975609756097561,
+      "roc_auc": 1.0,
+      "pr_auc": 1.0,
+      "precision_at_k": 0.8333333333333334,
+      "recall_at_k": 1.0,
+      "k": 24,
+      "confusion_matrix": [
+        [
+          459,
+          1
+        ],
+        [
+          0,
+          20
+        ]
+      ],
+      "false_positive_rate": 0.002173913043478261,
+      "false_negative_rate": 0.0,
+      "samples": 480,
+      "positive_labels": 20
+    }
+  },
+  "runtime": {
+    "torch": "2.13.0+cpu",
+    "torch_geometric": "2.6.1"
+  },
+  "graph": "Directed temporal links from earlier to later transactions sharing account/device. Inference messages flow forward only.",
+  "limitations": [
+    "Separate offline experiment; not the default API model.",
+    "Single synthetic seed; no real banking claims.",
+    "No future edges or labels used for training."
+  ]
+}

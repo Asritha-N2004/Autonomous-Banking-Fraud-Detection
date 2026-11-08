@@ -1,0 +1,20 @@
+{
+  "url": "https://sentinel-banking-fraud.vercel.app",
+  "deployment_id": "dpl_ApiAmHi6QmU6w8jduNDLjZZdq4HY",
+  "verified_at": "2026-11-08T09:07:31.047060+00:00",
+  "checks": {
+    "health": 200,
+    "sign_in": 200,
+    "/api/auth/me": 200,
+    "/api/analytics/dashboard": 200,
+    "/api/analytics/transaction-trends": 200,
+    "/api/fraud/alerts": 200,
+    "/api/models/metrics": 200,
+    "/api/analytics/agent-performance": 200,
+    "/api/investigations": 200,
+    "/api/analytics/fraud-trends": 200,
+    "logout": 200
+  },
+  "daily_groups": 34,
+  "trend_transaction_total": 2400
+}

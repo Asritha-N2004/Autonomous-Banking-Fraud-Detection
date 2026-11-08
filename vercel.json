@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "dashboard": {
+      "root": "frontend",
+      "framework": "vite",
+      "installCommand": "pnpm install --frozen-lockfile",
+      "buildCommand": "pnpm run build",
+      "outputDirectory": "dist",
+      "rewrites": [{"source": "/(.*)", "destination": "/index.html"}]
+    },
+    "backend": {
+      "root": ".",
+      "framework": "fastapi",
+      "entrypoint": "backend.app.main:app",
+      "buildCommand": "python scripts/build_vercel.py",
+      "functions": {
+        "backend/app/main.py": {
+          "maxDuration": 120,
+          "includeFiles": "models/**"
+        }
+      }
+    }
+  },
+  "rewrites": [
+    {"source": "/api/(.*)", "destination": {"service": "backend"}},
+    {"source": "/(.*)", "destination": {"service": "dashboard"}}
+  ]
+}
